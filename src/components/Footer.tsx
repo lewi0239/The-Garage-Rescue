@@ -57,7 +57,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-gray-900"
                 >
                   <MdPhone size={16} aria-hidden="true" />
-                  Brodie: 647-914-9791
+                  Brodie: (647) 914 9791
                 </a>
               </li>
               <li>
@@ -67,7 +67,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-gray-900"
                 >
                   <MdPhone size={16} aria-hidden="true" />
-                  Isaac: (613) 889-5987
+                  Isaac: (613) 889 5987
                 </a>
               </li>
               <li>
