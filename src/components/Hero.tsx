@@ -7,7 +7,6 @@ export default function Hero({ id }: { id?: string }) {
     >
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-
           {/* Text */}
           <div className="flex flex-col gap-6">
             <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 text-sm font-medium text-brand-green">
@@ -38,10 +37,9 @@ export default function Hero({ id }: { id?: string }) {
             <img
               src="/hero.svg"
               alt="Garage Rescue shield illustration"
-              className="h-auto w-64 drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] sm:w-80 lg:w-96"
+              className="h-auto w-64 drop-shadow-[8px_10px_6px_rgba(0,0,0,0.45)] sm:w-80 lg:w-96"
             />
           </div>
-
         </div>
       </div>
     </section>
