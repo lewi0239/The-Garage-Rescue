@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const plans = [
@@ -51,6 +52,112 @@ const plans = [
   },
 ];
 
+function PricingCard({
+  pkg,
+  subtitle,
+  color,
+  pricing,
+  includes,
+  onSelectPackage,
+}: (typeof plans)[number] & { onSelectPackage?: (pkg: string) => void }) {
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const [stuck, setStuck] = useState(false);
+
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setStuck(!entry.isIntersecting),
+      { rootMargin: "-64px 0px 0px 0px", threshold: 0 },
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <article
+      aria-label={`${pkg} package`}
+      style={{ borderTopColor: color }}
+      className="flex flex-col gap-4 rounded-xl border border-gray-200 border-t-4 bg-brand-white"
+    >
+      {/* Sentinel – sits at the natural position of the header */}
+      <div ref={sentinelRef} className="h-0" aria-hidden="true" />
+
+      {/* Sticky header */}
+      <div
+        style={stuck ? { borderBottomColor: color } : undefined}
+        className={`sticky top-16 z-10 rounded-t-xl bg-brand-white px-6 pt-6 pb-2 transition-all duration-200 ${
+          stuck ? "border-b-6 shadow-sm" : ""
+        }`}
+      >
+        <span className="text-2xl font-bold text-brand-green">{pkg}</span>
+        <p className="text-sm font-medium text-brand-grey">{subtitle}</p>
+      </div>
+
+      {/* Pricing table */}
+      <div className="mx-6 rounded-lg bg-brand-fff p-4 text-sm">
+        <p className="mb-2 font-semibold text-brand-black">
+          Pricing by garage size
+        </p>
+        <ul className="flex flex-col gap-1 text-brand-grey">
+          <li className="flex justify-between">
+            <span>1–1.5 car</span>
+            <span className="font-semibold text-brand-black">
+              {pricing.small}
+            </span>
+          </li>
+          <li className="flex justify-between">
+            <span>2 car</span>
+            <span className="font-semibold text-brand-black">
+              {pricing.medium}
+            </span>
+          </li>
+          <li className="flex justify-between">
+            <span>3+ car</span>
+            <span className="font-semibold text-brand-black">
+              {pricing.large}
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Includes */}
+      <ul
+        className="mx-6 flex flex-col gap-2"
+        aria-label={`What's included in ${pkg}`}
+      >
+        {includes.map((item) => (
+          <li
+            key={item}
+            className="flex items-start gap-2 text-sm text-brand-grey"
+          >
+            <span className="mt-0.5 text-brand-green" aria-hidden="true">
+              ✓
+            </span>
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-auto px-6 pb-6">
+        <button
+          type="button"
+          aria-label={`Book the ${pkg} package`}
+          onClick={() => {
+            onSelectPackage?.(pkg);
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="block w-full rounded-lg bg-brand-green py-2.5 text-center text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+        >
+          Book {pkg}
+        </button>
+      </div>
+    </article>
+  );
+}
+
 export default function Pricing({
   id,
   onSelectPackage,
@@ -80,85 +187,12 @@ export default function Pricing({
           ref={ref}
           className="reveal mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3"
         >
-          {plans.map(({ pkg, subtitle, color, pricing, includes }) => (
-            <article
-              key={pkg}
-              aria-label={`${pkg} package`}
-              style={{ borderTopColor: color }}
-              className="flex flex-col gap-4 rounded-xl border border-gray-200 border-t-4 bg-brand-white p-6"
-            >
-              {/* Header */}
-              <div>
-                <span className="text-2xl font-bold text-brand-green">
-                  {pkg}
-                </span>
-                <p className="text-sm font-medium text-brand-grey">
-                  {subtitle}
-                </p>
-              </div>
-
-              {/* Pricing table */}
-              <div className="rounded-lg bg-brand-fff p-4 text-sm">
-                <p className="mb-2 font-semibold text-brand-black">
-                  Pricing by garage size
-                </p>
-                <ul className="flex flex-col gap-1 text-brand-grey">
-                  <li className="flex justify-between">
-                    <span>1–1.5 car</span>
-                    <span className="font-semibold text-brand-black">
-                      {pricing.small}
-                    </span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>2 car</span>
-                    <span className="font-semibold text-brand-black">
-                      {pricing.medium}
-                    </span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>3+ car</span>
-                    <span className="font-semibold text-brand-black">
-                      {pricing.large}
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Includes */}
-              <ul
-                className="flex flex-col gap-2"
-                aria-label={`What's included in ${pkg}`}
-              >
-                {includes.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-sm text-brand-grey"
-                  >
-                    <span
-                      className="mt-0.5 text-brand-green"
-                      aria-hidden="true"
-                    >
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <button
-                type="button"
-                aria-label={`Book the ${pkg} package`}
-                onClick={() => {
-                  onSelectPackage?.(pkg);
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="mt-auto block w-full rounded-lg bg-brand-green py-2.5 text-center text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
-              >
-                Book {pkg}
-              </button>
-            </article>
+          {plans.map((plan) => (
+            <PricingCard
+              key={plan.pkg}
+              {...plan}
+              onSelectPackage={onSelectPackage}
+            />
           ))}
         </div>
       </div>
