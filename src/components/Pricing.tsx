@@ -5,7 +5,6 @@ const plans = [
     pkg: "Bronze",
     subtitle: "Essential Clean & Clear",
     color: "#D0A234",
-    time: "3–4 hrs",
     pricing: { small: "$200", medium: "$300", large: "$500" },
     includes: [
       "Complete floor sweeping & industrial vacuuming",
@@ -20,7 +19,6 @@ const plans = [
     pkg: "Silver",
     subtitle: "Deep Clean & Organize",
     color: "#BCC6CC",
-    time: "5–6 hrs",
     pricing: { small: "$400", medium: "$600", large: "$1,000" },
     includes: [
       "Everything in Bronze, plus:",
@@ -38,7 +36,6 @@ const plans = [
     pkg: "Gold",
     subtitle: "Complete Transformation",
     color: "#EFBF04",
-    time: "8–10 hrs",
     pricing: { small: "$600", medium: "$900", large: "$1,500" },
     includes: [
       "Everything in Silver, plus:",
@@ -83,7 +80,7 @@ export default function Pricing({
           ref={ref}
           className="reveal mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3"
         >
-          {plans.map(({ pkg, subtitle, color, time, pricing, includes }) => (
+          {plans.map(({ pkg, subtitle, color, pricing, includes }) => (
             <article
               key={pkg}
               aria-label={`${pkg} package`}
@@ -125,9 +122,6 @@ export default function Pricing({
                     </span>
                   </li>
                 </ul>
-                <p className="mt-3 text-xs text-brand-grey">
-                  ⏱ Estimated time: {time}
-                </p>
               </div>
 
               {/* Includes */}

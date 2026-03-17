@@ -19,20 +19,21 @@ export default function About({ id }: { id?: string }) {
               id="about-heading"
               className="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl"
             >
-              We Rescue Garages.<br />
+              We Rescue Garages.
+              <br />
               <span className="text-brand-green">You Get Your Space Back.</span>
             </h2>
             <p className="text-lg leading-relaxed text-brand-grey">
-              Is your garage more of a storage nightmare than a functional space?
-              We get it — and we're here to fix that. Garage Rescue is an
+              Is your garage more of a storage nightmare than a functional
+              space? We get it — and we're here to fix that. Garage Rescue is an
               Ottawa-based team that cleans out the clutter, hauls away the
-              junk, and transforms your garage into a space you'll actually
-              want to use.
+              junk, and transforms your garage into a space you'll actually want
+              to use.
             </p>
             <p className="text-lg leading-relaxed text-brand-grey">
               No job is too big or too messy. Whether it's years of accumulated
-              stuff or a quick refresh, we show up, we sort it out, and we
-              leave you with a garage that works for you — not against you.
+              stuff or a quick refresh, we show up, we sort it out, and we leave
+              you with a garage that works for you — not against you.
             </p>
             <a
               href="#contact"
@@ -46,8 +47,8 @@ export default function About({ id }: { id?: string }) {
           {/* Stats */}
           <div className="grid grid-cols-2 gap-6" aria-label="Key stats">
             {[
-              { stat: "500+", label: "Garages Rescued" },
               { stat: "100%", label: "Satisfaction Guaranteed" },
+              { stat: "Free", label: "No-Obligation Quotes" },
               { stat: "Ottawa", label: "Locally Owned & Operated" },
               { stat: "Same Week", label: "Booking Available" },
             ].map(({ stat, label }) => (
@@ -55,12 +56,15 @@ export default function About({ id }: { id?: string }) {
                 key={label}
                 className="flex flex-col gap-2 rounded-xl border border-gray-200 bg-brand-white p-6"
               >
-                <span className="text-3xl font-bold text-brand-green">{stat}</span>
-                <span className="text-sm font-medium text-brand-grey">{label}</span>
+                <span className="text-3xl font-bold text-brand-green">
+                  {stat}
+                </span>
+                <span className="text-sm font-medium text-brand-grey">
+                  {label}
+                </span>
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
