@@ -12,8 +12,8 @@ export default function About({ id }: { id?: string }) {
         >
           {/* Text */}
           <div className="flex flex-col gap-6">
-            <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 text-sm font-medium text-brand-green">
-              Ottawa's Garage Experts
+            <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 mb-1.5 text-sm font-medium text-brand-green">
+              Professional cleaning & organization
             </span>
             <h2
               id="about-heading"

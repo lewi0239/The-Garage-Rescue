@@ -12,10 +12,12 @@ function App() {
   return (
     <>
       <NavBar />
-      <Hero id="hero" />
-      <About id="about" />
-      <Pricing id="pricing" onSelectPackage={setSelectedPackage} />
-      <Contact id="contact" selectedPackage={selectedPackage} />
+      <main>
+        <Hero id="hero" />
+        <About id="about" />
+        <Pricing id="pricing" onSelectPackage={setSelectedPackage} />
+        <Contact id="contact" selectedPackage={selectedPackage} />
+      </main>
       <Footer />
     </>
   );

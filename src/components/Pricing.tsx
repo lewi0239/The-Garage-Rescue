@@ -95,7 +95,7 @@ function PricingCard({
       </div>
 
       {/* Pricing table */}
-      <div className="mx-6 rounded-lg bg-brand-fff p-4 text-sm">
+      <div className="mx-6 rounded-lg bg-brand-fff p-8 text-sm">
         <p className="mb-2 font-semibold text-brand-black">
           Pricing by garage size
         </p>
@@ -129,7 +129,7 @@ function PricingCard({
         {includes.map((item) => (
           <li
             key={item}
-            className="flex items-start gap-2 text-sm text-brand-grey"
+            className="flex items-start px-5 gap-2 text-sm text-brand-grey"
           >
             <span className="mt-0.5 text-brand-green" aria-hidden="true">
               ✓
@@ -170,7 +170,7 @@ export default function Pricing({
   return (
     <section id={id} aria-labelledby="pricing-heading">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 text-sm font-medium text-brand-green">
+        <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-2 mb-1.5 text-sm font-medium text-brand-green">
           Transparent Pricing
         </span>
         <h2

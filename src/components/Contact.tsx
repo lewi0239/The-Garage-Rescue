@@ -62,7 +62,7 @@ export default function Contact({
   return (
     <section id={id} aria-labelledby="contact-heading">
       <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
-        <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 text-sm font-medium text-brand-green">
+        <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 mb-1.5 text-sm font-medium text-brand-green">
           Get in Touch
         </span>
         <h2

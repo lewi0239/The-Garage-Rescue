@@ -8,7 +8,7 @@ export default function Footer() {
       className="border-t border-gray-200 bg-white"
     >
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           {/* Column 1 — Brand */}
           <div className="flex flex-col gap-6">
             <img
@@ -19,31 +19,37 @@ export default function Footer() {
             <p className="max-w-xs text-sm text-gray-500">
               Reclaim your space. Professional garage organization solutions.
             </p>
+          </div>
+
+          {/* Column 2 — socials */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-xs font-semibold tracking-widest text-gray-900">
+              Socials
+            </h3>
             <div className="flex gap-4" aria-label="Social media links">
               <a
                 href="https://www.facebook.com/profile.php?id=61580727951830"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Garage Rescue on Facebook"
-                className="text-brand-grey transition-colors hover:text-blue-600"
+                aria-label="Visit our Facebook page"
+                className="text-gray-500 transition-colors hover:text-gray-900"
               >
-                <FaFacebook size={22} aria-hidden="true" />
+                <FaFacebook size={32} aria-hidden="true" />
               </a>
               <a
-                href="https://www.instagram.com/thegaragerescue?igsh=MTh1cWhmeWJqOW9obQ=="
+                href="https://www.instagram.com/thegaragerescue?igsh=MTh1cWhmeWJqOW9obQ"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Garage Rescue on Instagram"
-                className="text-brand-grey transition-colors hover:text-pink-500"
+                aria-label="Visit our Instagram page"
+                className="text-gray-500 transition-colors hover:text-gray-900"
               >
-                <FaInstagram size={22} aria-hidden="true" />
+                <FaInstagram size={32} aria-hidden="true" />
               </a>
             </div>
           </div>
 
-          {/* Column 2 — Contact */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-900">
+            <h3 className="text-xs font-semibold tracking-widest text-gray-900">
               Contact Us
             </h3>
             <ul
