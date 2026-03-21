@@ -26,7 +26,7 @@ export default function Hero({ id }: { id?: string }) {
             <a
               href="#contact"
               aria-label="Book a Rescue"
-              className="self-start rounded-lg bg-brand-green px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+              className="self-start rounded-lg bg-brand-green-btn px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
             >
               Book a Rescue
             </a>

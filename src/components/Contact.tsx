@@ -132,22 +132,40 @@ export default function Contact({
                 >
                   Package
                 </label>
-                <select
-                  id="package"
-                  name="package"
-                  value={packageValue}
-                  onChange={(e) => setPackageValue(e.target.value)}
-                  aria-required="true"
-                  required
-                  className="accent-brand-green rounded-lg border border-gray-200 px-4 py-2.5 text-sm text-brand-black outline-none focus:border-brand-green"
-                >
-                  <option value="">Select a package...</option>
-                  {packages.map((pkg) => (
-                    <option key={pkg} value={pkg}>
-                      {pkg}
-                    </option>
-                  ))}
-                </select>
+                <div className="relative">
+                  <select
+                    id="package"
+                    name="package"
+                    value={packageValue}
+                    onChange={(e) => setPackageValue(e.target.value)}
+                    aria-required="true"
+                    required
+                    className="w-full appearance-none rounded-lg border border-gray-200 px-4 py-2.5 pr-10 text-sm text-brand-black outline-none focus:border-brand-green"
+                  >
+                    <option value="">Select a package...</option>
+                    {packages.map((pkg) => (
+                      <option key={pkg} value={pkg}>
+                        {pkg}
+                      </option>
+                    ))}
+                  </select>
+                  <svg
+                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-brand-grey"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 6l4 4 4-4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
               <div className="flex flex-col gap-1.5">
                 <label
@@ -156,20 +174,38 @@ export default function Contact({
                 >
                   Garage Size
                 </label>
-                <select
-                  id="garageSize"
-                  name="garageSize"
-                  aria-required="true"
-                  required
-                  className="accent-brand-green rounded-lg border border-gray-200 px-4 py-2.5 text-sm text-brand-black outline-none focus:border-brand-green"
-                >
-                  <option value="">Select a size...</option>
-                  {garageSizes.map((size) => (
-                    <option key={size} value={size}>
-                      {size}
-                    </option>
-                  ))}
-                </select>
+                <div className="relative">
+                  <select
+                    id="garageSize"
+                    name="garageSize"
+                    aria-required="true"
+                    required
+                    className="w-full appearance-none rounded-lg border border-gray-200 px-4 py-2.5 pr-10 text-sm text-brand-black outline-none focus:border-brand-green"
+                  >
+                    <option value="">Select a size...</option>
+                    {garageSizes.map((size) => (
+                      <option key={size} value={size}>
+                        {size}
+                      </option>
+                    ))}
+                  </select>
+                  <svg
+                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-brand-grey"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 6l4 4 4-4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
 
@@ -198,7 +234,7 @@ export default function Contact({
             type="submit"
             disabled={isLoading}
             aria-label="Book a Rescue"
-            className="self-start rounded-lg bg-brand-green px-8 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90 disabled:opacity-50"
+            className="self-start rounded-lg bg-brand-green-btn px-8 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             {isLoading ? "Sending..." : "Book a Rescue"}
           </button>

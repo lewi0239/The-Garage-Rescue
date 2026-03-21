@@ -78,7 +78,7 @@ function PricingCard({
     <article
       aria-label={`${pkg} package`}
       style={{ borderTopColor: color }}
-      className="flex flex-col gap-4 rounded-xl border border-gray-200 border-t-4 bg-brand-white"
+      className="flex flex-col gap-4 rounded-xl border border-gray-200 border-t-4 bg-brand-fff"
     >
       {/* Sentinel – sits at the natural position of the header */}
       <div ref={sentinelRef} className="h-0" aria-hidden="true" />
@@ -86,7 +86,7 @@ function PricingCard({
       {/* Sticky header */}
       <div
         style={stuck ? { borderBottomColor: color } : undefined}
-        className={`sticky top-16 z-10 rounded-t-xl bg-brand-white px-6 pt-6 pb-2 transition-all duration-200 ${
+        className={`sticky top-16 z-10 rounded-t-xl bg-brand-fff/80 backdrop-blur-md px-6 pt-6 pb-2 transition-all duration-200 ${
           stuck ? "border-b-6 shadow-sm" : ""
         }`}
       >
@@ -149,7 +149,7 @@ function PricingCard({
               .getElementById("contact")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="block w-full rounded-lg bg-brand-green py-2.5 text-center text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+          className="block w-full rounded-lg bg-brand-green-btn py-2.5 text-center text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
         >
           Book {pkg}
         </button>

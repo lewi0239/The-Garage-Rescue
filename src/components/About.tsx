@@ -38,7 +38,7 @@ export default function About({ id }: { id?: string }) {
             <a
               href="#contact"
               aria-label="Book a garage rescue"
-              className="self-start rounded-lg bg-brand-green px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+              className="self-start rounded-lg bg-brand-green-btn px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
             >
               Book a Rescue
             </a>
@@ -54,7 +54,7 @@ export default function About({ id }: { id?: string }) {
             ].map(({ stat, label }) => (
               <div
                 key={label}
-                className="flex flex-col gap-2 rounded-xl border border-gray-200 bg-brand-white p-6"
+                className="flex flex-col gap-2 rounded-xl border border-gray-200 bg-brand-fff p-6"
               >
                 <span className="text-3xl font-bold text-brand-green">
                   {stat}

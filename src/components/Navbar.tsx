@@ -64,7 +64,7 @@ export default function NavBar() {
             <a
               href="#contact"
               aria-label="Book a Rescue"
-              className="rounded-lg bg-brand-green px-4 py-2 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+              className="rounded-lg bg-brand-green-btn px-4 py-2 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
             >
               Book a Rescue
             </a>
@@ -89,7 +89,7 @@ export default function NavBar() {
           <a
             href="#contact"
             aria-label="Book a Rescue"
-            className="mt-2 block rounded-lg bg-brand-green px-4 py-2 text-center text-sm font-semibold text-brand-black"
+            className="mt-2 block rounded-lg bg-brand-green-btn px-4 py-2 text-center text-sm font-semibold text-brand-black"
           >
             Book a Rescue
           </a>
