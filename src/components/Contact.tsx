@@ -197,7 +197,7 @@ export default function Contact({
           <button
             type="submit"
             disabled={isLoading}
-            aria-label="Submit contact form"
+            aria-label="Book a Rescue"
             className="self-start rounded-lg bg-brand-green px-8 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             {isLoading ? "Sending..." : "Book a Rescue"}

@@ -14,6 +14,8 @@ export default function Footer() {
             <img
               src="/gr-logo.png"
               alt="Garage Rescue logo"
+              width={777}
+              height={230}
               className="h-12 w-auto object-contain"
             />
             <p className="max-w-xs text-sm text-gray-500">
@@ -59,7 +61,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+16479149791"
-                  aria-label="Call Brodie at 647-914-9791"
+                  aria-label="Brodie: (647) 914 9791"
                   className="flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-gray-900"
                 >
                   <MdPhone size={16} aria-hidden="true" />
@@ -69,7 +71,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+16138895987"
-                  aria-label="Call Isaac at 613-889-5987"
+                  aria-label="Isaac: (613) 889 5987"
                   className="flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-gray-900"
                 >
                   <MdPhone size={16} aria-hidden="true" />
@@ -79,7 +81,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:sales@thegaragerescue.com"
-                  aria-label="Send us an email"
+                  aria-label="sales@thegaragerescue.com"
                   className="flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-gray-900"
                 >
                   <MdEmail size={16} aria-hidden="true" />

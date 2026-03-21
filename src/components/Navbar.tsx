@@ -38,6 +38,9 @@ export default function NavBar() {
               <img
                 alt="Garage Rescue logo"
                 src="/gr-logo.png"
+                width={777}
+                height={230}
+                fetchPriority="high"
                 className="h-14 w-auto object-contain"
               />
             </a>
@@ -60,7 +63,7 @@ export default function NavBar() {
           <div className="hidden sm:flex sm:items-center">
             <a
               href="#contact"
-              aria-label="Book a garage rescue"
+              aria-label="Book a Rescue"
               className="rounded-lg bg-brand-green px-4 py-2 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
             >
               Book a Rescue
@@ -85,7 +88,7 @@ export default function NavBar() {
           ))}
           <a
             href="#contact"
-            aria-label="Book a garage rescue"
+            aria-label="Book a Rescue"
             className="mt-2 block rounded-lg bg-brand-green px-4 py-2 text-center text-sm font-semibold text-brand-black"
           >
             Book a Rescue

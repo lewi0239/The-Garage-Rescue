@@ -25,7 +25,7 @@ export default function Hero({ id }: { id?: string }) {
             </p>
             <a
               href="#contact"
-              aria-label="Book a garage rescue"
+              aria-label="Book a Rescue"
               className="self-start rounded-lg bg-brand-green px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
             >
               Book a Rescue
@@ -37,6 +37,8 @@ export default function Hero({ id }: { id?: string }) {
             <img
               src="/hero.svg"
               alt="Garage Rescue shield illustration"
+              width={201}
+              height={229}
               className="h-auto w-64 drop-shadow-[8px_10px_6px_rgba(0,0,0,0.45)] sm:w-80 lg:w-96"
             />
           </div>
