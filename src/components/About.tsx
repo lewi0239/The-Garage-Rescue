@@ -12,7 +12,7 @@ export default function About({ id }: { id?: string }) {
         >
           {/* Text */}
           <div className="flex flex-col gap-6">
-            <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 mb-1.5 text-sm font-medium text-brand-green">
+            <span className="inline-block w-fit rounded-full border border-brand-green-btn px-4 py-1.5 mb-1.5 text-sm font-medium text-brand-green-btn">
               Professional cleaning & organization
             </span>
             <h2
@@ -38,7 +38,7 @@ export default function About({ id }: { id?: string }) {
             <a
               href="#contact"
               aria-label="Book a garage rescue"
-              className="self-start rounded-lg bg-brand-green-btn px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+              className="self-start rounded-lg bg-brand-green px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
             >
               Book a Rescue
             </a>

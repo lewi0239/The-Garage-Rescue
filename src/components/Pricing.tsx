@@ -90,7 +90,7 @@ function PricingCard({
           stuck ? "border-b-6 shadow-sm" : ""
         }`}
       >
-        <span className="text-2xl font-bold text-brand-green">{pkg}</span>
+        <span className="text-2xl font-bold text-brand-green-btn">{pkg}</span>
         <p className="text-sm font-medium text-brand-grey">{subtitle}</p>
       </div>
 
@@ -131,7 +131,7 @@ function PricingCard({
             key={item}
             className="flex items-start px-5 gap-2 text-sm text-brand-grey"
           >
-            <span className="mt-0.5 text-brand-green" aria-hidden="true">
+            <span className="mt-0.5 text-brand-green-btn" aria-hidden="true">
               ✓
             </span>
             {item}
@@ -149,7 +149,7 @@ function PricingCard({
               .getElementById("contact")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="block w-full rounded-lg bg-brand-green-btn py-2.5 text-center text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+          className="block w-full rounded-lg bg-brand-green py-2.5 text-center text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
         >
           Book {pkg}
         </button>
@@ -170,14 +170,14 @@ export default function Pricing({
   return (
     <section id={id} aria-labelledby="pricing-heading">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-2 mb-1.5 text-sm font-medium text-brand-green">
+        <span className="inline-block w-fit rounded-full border border-brand-green-btn px-4 py-2 mb-1.5 text-sm font-medium text-brand-green-btn">
           Transparent Pricing
         </span>
         <h2
           id="pricing-heading"
           className="mt-4 text-3xl font-bold tracking-tight text-brand-black sm:text-4xl"
         >
-          Choose Your <span className="text-brand-green">Package</span>
+          Choose Your <span className="text-brand-green-btn">Package</span>
         </h2>
         <p className="mt-3 max-w-2xl text-lg text-brand-grey">
           Every job is different — pick the level that fits your garage.

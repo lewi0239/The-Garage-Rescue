@@ -11,7 +11,6 @@ const navigation = [
   { name: "Contact", href: "#contact" },
 ];
 
-
 export default function NavBar() {
   return (
     <Disclosure
@@ -21,7 +20,6 @@ export default function NavBar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-
           {/* Mobile: hamburger */}
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <DisclosureButton
@@ -34,7 +32,11 @@ export default function NavBar() {
 
           {/* Logo + desktop links */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <a href="#hero" aria-label="Go to top of page" className="flex shrink-0 items-center">
+            <a
+              href="#hero"
+              aria-label="Go to top of page"
+              className="flex shrink-0 items-center"
+            >
               <img
                 alt="Garage Rescue logo"
                 src="/gr-logo.png"
@@ -64,12 +66,11 @@ export default function NavBar() {
             <a
               href="#contact"
               aria-label="Book a Rescue"
-              className="rounded-lg bg-brand-green-btn px-4 py-2 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+              className="rounded-lg bg-brand-green px-4 py-2 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
             >
               Book a Rescue
             </a>
           </div>
-
         </div>
       </div>
 
@@ -89,7 +90,7 @@ export default function NavBar() {
           <a
             href="#contact"
             aria-label="Book a Rescue"
-            className="mt-2 block rounded-lg bg-brand-green-btn px-4 py-2 text-center text-sm font-semibold text-brand-black"
+            className="mt-2 block rounded-lg bg-brand-green px-4 py-2 text-center text-sm font-semibold text-brand-black"
           >
             Book a Rescue
           </a>

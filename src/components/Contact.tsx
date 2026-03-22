@@ -62,14 +62,14 @@ export default function Contact({
   return (
     <section id={id} aria-labelledby="contact-heading">
       <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
-        <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 mb-1.5 text-sm font-medium text-brand-green">
+        <span className="inline-block w-fit rounded-full border border-brand-green-btn px-4 py-1.5 mb-1.5 text-sm font-medium text-brand-green-btn">
           Get in Touch
         </span>
         <h2
           id="contact-heading"
           className="mt-4 text-3xl font-bold tracking-tight text-brand-black sm:text-4xl"
         >
-          Book Your <span className="text-brand-green">Rescue</span>
+          Book Your <span className="text-brand-green-btn">Rescue</span>
         </h2>
         <p className="mt-3 text-lg leading-relaxed text-brand-grey">
           Fill out the form below and we'll get back to you within 24 hours.
@@ -234,7 +234,7 @@ export default function Contact({
             type="submit"
             disabled={isLoading}
             aria-label="Book a Rescue"
-            className="self-start rounded-lg bg-brand-green-btn px-8 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90 disabled:opacity-50"
+            className="self-start rounded-lg bg-brand-green px-8 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             {isLoading ? "Sending..." : "Book a Rescue"}
           </button>

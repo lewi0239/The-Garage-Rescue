@@ -9,14 +9,14 @@ export default function Hero({ id }: { id?: string }) {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           {/* Text */}
           <div className="flex flex-col gap-6">
-            <span className="inline-block w-fit rounded-full border border-brand-green px-4 py-1.5 mb-1.5 text-sm font-medium text-brand-green">
+            <span className="inline-block w-fit rounded-full border border-brand-green-btn px-4 py-1.5 mb-1.5 text-sm font-medium text-brand-green-btn">
               Ottawa's Garage Experts
             </span>
             <h1
               id="hero-heading"
               className="text-4xl font-bold tracking-tight text-brand-black sm:text-5xl lg:text-6xl"
             >
-              Reclaim <span className="text-brand-green">Your Space</span>
+              Reclaim <span className="text-brand-green-btn">Your Space</span>
             </h1>
             <p className="max-w-lg text-lg leading-relaxed text-brand-black">
               Transform your cluttered garage into an organized, functional
@@ -26,7 +26,7 @@ export default function Hero({ id }: { id?: string }) {
             <a
               href="#contact"
               aria-label="Book a Rescue"
-              className="self-start rounded-lg bg-brand-green-btn px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
+              className="self-start rounded-lg bg-brand-green px-6 py-3 text-sm font-semibold text-brand-black transition-opacity hover:opacity-90"
             >
               Book a Rescue
             </a>
