@@ -78,7 +78,7 @@ function PricingCard({
     <article
       aria-label={`${pkg} package`}
       style={{ borderTopColor: color }}
-      className="flex flex-col gap-4 rounded-xl border border-gray-200 border-t-4 bg-brand-fff"
+      className="flex flex-col gap-4 rounded-xl border border-gray-200 border-t-4 bg-brand-fff  shadow-xl"
     >
       {/* Sentinel – sits at the natural position of the header */}
       <div ref={sentinelRef} className="h-0" aria-hidden="true" />

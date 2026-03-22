@@ -54,7 +54,7 @@ export default function About({ id }: { id?: string }) {
             ].map(({ stat, label }) => (
               <div
                 key={label}
-                className="flex flex-col gap-2 rounded-xl border border-gray-200 bg-brand-fff p-6"
+                className="flex flex-col gap-2 rounded-xl border border-gray-200 bg-brand-fff shadow-md overflow-hidden p-6"
               >
                 <span className="text-3xl font-bold text-brand-green">
                   {stat}
